@@ -9,3 +9,4 @@ From the home page to the career opportunities section, every aspect was meticul
 *Technical Details:
  Utilized HTML, CSS, and JavaScript to craft a responsive and functional web interface.
  Implemented custom JavaScript validations to ensure data accuracy and user-friendly interactions.
+![Screenshot (24)](https://github.com/ABINAYAKAPIL/IT-SECTOR-WEB-PAGE/assets/139993333/e5cc000b-60e2-40e4-a0c7-91a9d5bf2890)
