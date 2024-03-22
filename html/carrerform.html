@@ -1,0 +1,159 @@
+<html>
+    <title>Carrerform</title>
+    <head>
+      <script src="C:\Users\kapil\Desktop\PROJECT\javascript\carrerformjs.js"></script>
+      <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing:border-box;
+
+}
+
+.container {
+  background-image: url("C:/Users/kapil/Desktop/PROJECT/images/job.jpg");
+  background-color: rgb(28, 23, 23);
+  margin: auto;
+  width: 45%;
+  border: 8px solid #9a9393;
+  padding: 5px;
+  height: 710px;
+  background-repeat: no-repeat;
+  margin-top: 5px;
+
+  
+}
+
+
+/* Full-width input fields */
+input[type=text] ,input[type=tel],input[type=select],input[type=number]{
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 22px 0;
+  
+  display: inline-block;
+  border: none;
+  background: #efeff132;
+}
+select
+{
+  background: #2ba1c832;
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 22px 0;
+  font-size: 17px;
+  font-weight:450;
+  display: inline-block;
+  height: 28px;
+  border: rgba(119, 14, 175, 0.645);
+}
+option{
+  background: #2ba1c832;
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 22px 0;
+  font-size: 17px;
+  font-weight: bolder;
+  display: inline-block;
+}
+
+
+
+
+
+input[type=text]:focus,select:focus,input[type=tel]:focus {
+  background-color: hsl(0, 11%, 89%);
+  outline:blue;
+}
+
+hr ,select{
+  border: 1px solid #dee0e4;
+  margin-bottom: 25px;
+  font-style: unset;
+}
+
+/* Set a style for the submit button */
+.applybtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  height: 40px;
+}
+
+.applybtn:hover {
+  opacity: 1;
+}
+
+
+a {
+  color: rgb(55, 129, 203);
+}
+
+
+label{
+  color: #dbdcde;
+}
+
+
+
+      </style>
+         </head>
+         <body>
+            <h1 style="text-align: center;font-size: 30px; font-style: inherit;color: rgb(241, 238, 239);">Job Application</h1>
+            <form name="form1" id="carrerform" >
+              <div class="container">
+                
+                <p style="font-size: 17px;color: rgb(230, 215, 170); padding-bottom: 1px;">Please fill this form to apply a job:</p>
+                <hr>
+                <label for="fname">*<b>First Name:</b></label>
+                <input type="text" placeholder="Your first name" name="fname" id="fname" >
+                <label for="lname"><b>Last Name:</b></label>
+                <input type="text" placeholder="Your last name" name="lname" id="lname" >
+                
+                <label for="email">*<b>Email Address</b></label>
+                <input type="text" placeholder="Your Email id" name="email" id="email" >
+                <label for="year"><b>*Year of Graduation</b></label>
+                <input type="text" placeholder="xxxx" name="year" id="year"  maxlength="4" onkeypress="return isNumberKey(event)">
+                <label for="contact">*<b>Contact Number</b></label>
+                <input type="tel" placeholder="+91 xxxxxxxxxx" name="contact"   id="contact" maxlength="10"  onkeypress="return isNumberKey(event)"/>
+            
+              <label for="gender"><b>Gender</b></label>
+                <select id="gender" name="gender">
+                      <option value="select">Select</option>
+            
+                  <option value="male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="notprefer">Not prefer to say</option>
+                </select>
+                
+                
+                <label for="skill"><b>*Job Role</b></label>
+                <select id="skill" name="skill">
+                          <option value="select">Select</option>
+            
+                  <option value="Web Developer">Web Developer</option>
+                  <option value="Product Marketer">Product Marketer</option>
+                  
+                              
+            </select>
+            <form action="/action_page.php">
+              <label for="file"><b>Click here to upload a resume</b></label>
+
+              <input type="file" id="myFile" name="file">
+              
+            
+          <button type="submit" class="applybtn"  onclick="validateForm()";>Apply</button>
+
+              </div>
+              </form>
+              
+         </body>
+</html>

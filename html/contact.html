@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact us</title>
+    <link rel="stylesheet" type="text/css"href="C:\Users\kapil\Desktop\PROJECT\css\contactcss.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      function validateForm() {
+     var name = document.getElementById("name").value;
+     var email = document.getElementById("email").value;
+     var company = document.getElementById("company").value;
+   
+     var phone = document.getElementById("phone").value;
+   
+   
+     if (name.trim() === '') {
+       alert("Please enter your name.");
+       return;
+     }
+   
+     if (email.trim() === '') {
+       alert("Please enter your emailid.");
+       return;
+     }
+     if (company.trim() === '') {
+       alert("Please enter your company name.");
+       return;
+     }
+   
+     if (phone.trim() === '') {
+       alert("Please enter your phone number.");
+       return;
+     }
+     if(phone.trim>10){
+       alert("It should be 10 digits only");
+       return;
+     }
+     
+     submitForm();
+   }
+   
+   function isNumberKey(evt){ 
+    var charCode = (evt.which) ? evt.which : event.keyCode 
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    alert("please enter numbers only.");
+
+         }
+
+
+
+
+}
+   function submitForm() {
+     var name = document.getElementById("name").value;
+     var email = document.getElementById("email").value;
+     var company = document.getElementById("company").value;
+     var country = document.getElementById("country").value;
+     var phone = document.getElementById("phone").value;
+     var message = document.getElementById("message").value;
+     var successMessage = 'Your inquiry form has been successfully submitted by the ' + country + ' branch.';
+     if (!name|| !email || !company || !country || !phone || !message) {
+        alert("Please fill all fields.");}
+        else{
+     alert(successMessage);
+   }
+   document.getElementById('inquiryForm');
+    return false; 
+
+  }
+
+   </script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .contact-box {
+            background-color: #cdd4ce;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+            width: 50%;
+            margin: 0 auto;
+            border-style: groove;
+            padding-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-box h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        
+
+        img {
+            flex: 1;
+            
+            padding-left: 40px;
+        }
+
+        
+           
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="contact-box" >
+        <h1 style="font-style:inherit; color: rgb(38, 36, 71); font-size: 40px; text-align: center; padding-top: 0.5px; font-weight: bolder;">Let's get in touch</h1>
+        <p style="text-align: center; color: rgb(32, 7, 80);font-size: 20px; font-style: italic;">Whether you have a question, want to start a project, or simply want to connect, feel free to send me a message in the contact form</p>
+        <h2 style="text-align: center; font-size: 30px;color: rgb(22, 85, 99);">CONTACT US</h2>
+        <form id="inquiryForm" onsubmit="submitForm(event)">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" ><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" ><br>
+            <label for="company">Company:</label><br>
+            <input type="text" id="company" name="company"><br>
+            <label for="country">Country:</label><br>
+            <select id="country" name="country">
+                <option value="India">India</option>
+                <option value="Canada">Canada</option>
+                <option value="America">America</option>
+            </select><br>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone"  maxlength="10" onkeypress="return isNumberKey(event)"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" ></textarea><br>
+            <button type="submit" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+
+    <div class="address">
+        <!-- Address information here -->
+    </div>
+
+    <img src="C:\Users\kapil\Desktop\PROJECT\images\contactimage.jpg" alt="Contact Image">
+
+    <div class="details-box">
+      <div class="map-container">
+        <i class="fa-solid fa-location-dot" style="font-size: 35px; padding-right:20px; padding-top: 40px;"></i>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.4796939948965!2d76.31523767479335!3d9.97717589012704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d1739750d6b%3A0x1e26f77d28032ab3!2sInmakes%20Infotech%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1709555970433!5m2!1sen!2sin" width="600" height="450" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.4796939948965!2d76.31523767479335!3d9.97717589012704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d1739750d6b%3A0x1e26f77d28032ab3!2sInmakes%20Infotech%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1709555970433!5m2!1sen!2sin" target="iframe_a">First Floor , VJ Tower, Kochi, Kerala 682019</a>
+</a>
+      </div>
+      <i class="fa-solid fa-phone" style="font-size:35px; float: left; position: relative; padding-top :10px;padding-left: 10px;"> </i> 
+      <p><a href="tel:+918883499234" style="font-size: 30px;color: rgb(213, 98, 98); padding-left: 40px;">contact us:+918883499234</a></p>
+      <h2 style="font-size: 28px;color:rgb(210, 94, 94); font-weight: bolder; font-style: italic; padding-left: 100px;">Our Social Networks:</h2>
+      <a href="https://www.facebook.com/Inmakes.LH1/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/inmakeshub?lang=en" class="fa fa-twitter"></a>
+      <a href="https://www.linkedin.com/company/inmakesofficial/mycompany/verification/" class="fa fa-linkedin"></a>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

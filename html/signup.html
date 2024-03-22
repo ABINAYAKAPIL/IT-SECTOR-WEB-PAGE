@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<head>
+  <title>signup</title>
+  </script>
+    <script>
+    function validateForm(event) {
+  event.preventDefault(); // Prevent form submission
+  
+  // Get input values
+  var loginId = document.getElementById('loginId').value;
+  var password = document.getElementById('password').value;
+  var email= document.getElementById('email').value;
+
+  var confirmPassword = document.getElementById('confirmPassword').value;
+  function validateEmail(email) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+  // Validate login ID
+  if (loginId.trim() === '') {
+      alert("Please enter login ID.");
+      return;
+  }
+  if (email.trim() === '') {
+      alert("Please enter your email id.");
+      return;
+  }
+  //validate email
+  if (!validateEmail(email)) {
+        alert("Please enter a valid email id.");
+        return false;
+    }
+
+  // Validate password
+  if (password.length < 8 || !/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/\d/.test(password) || !/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) {
+      alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.");
+      return;
+  }
+
+  // Validate confirm password
+  if (password !== confirmPassword) {
+      alert("Passwords mismatch,Please enter the same password.");
+      return;
+  }
+  
+  alert(loginId+" ! you are successfully registered in Inmakes Infotech");
+  document.getElementById('registerForm').reset(); 
+    return false; 
+}
+
+
+</script>
+    <style>
+        
+        
+        
+
+        .register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-top:100px;
+  }
+
+  #registerForm {
+  width:480px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #5648d0;
+    border-radius: 5px;
+    background-color: #2c283c;
+    height: 300px;
+  }
+
+  .input-group {
+    margin-bottom: 10px;
+  }
+
+  label {
+    color: rgb(240, 238, 245);
+    font-style: oblique;
+    width: 190px; /* Fixed width for labels */
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  button {
+    background-color: #a2bede;
+    color: #483c8c;
+    padding: 6px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 200px;
+    margin-top: 10px;
+  }
+
+  img {
+    max-width: 360px;
+    height: auto;
+  }
+
+
+
+
+
+    </style>
+</head>
+
+
+
+<body>
+  <p style="padding-left:1200px; font-size: 18px;margin-top: 10px;">Have a Inmakes Account <a href="C:\Users\kapil\Desktop\PROJECT\html\signin.html">Sign in</a></p>
+<h2 style="text-align: center; color:rgb(27, 14, 48) ;font-size: 32px;"> Start with your free account today.</h2>
+  <div class="register-container">
+    <img src="C:\Users\kapil\Desktop\PROJECT\images\reg2.png" alt="Registration Image">
+    <div class="form-container">
+      <form id="registerForm" form name="register" >
+        <h2 style="font-size: 30px; font-style: oblique; color: aliceblue;text-align: center;">REGISTER</h2>
+
+        <div class="input-group">
+          <label for="loginId">Username:</label>
+          <input type="text" id="loginId" name="loginId" placeholder="Your name">
+        </div>
+        <div class="input-group">
+          <label for="email">Email Id</label>
+          <input type="text" id="email"  name="email" placeholder="Confirm your password">
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="pwd" placeholder="Your password" required>
+        </div>
+        <div class="input-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" placeholder="Confirm your password">
+        </div>
+
+        <button type="submit" onclick="validateForm(event)">Register</button>
+      </form>
+      <div id="error-message" class="error-message" style="display: none;">
+        <p>Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.</p>
+      </div>
+    </div>
+    
+  </div>
+  
+
+  </body>
+  </html>
+

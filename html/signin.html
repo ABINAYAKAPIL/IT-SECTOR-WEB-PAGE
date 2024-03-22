@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+  
+  height: 800spx;
+}
+
+.container {
+  display: flex; /* Set container as flex container */
+  width: 800px; /* Adjust the width as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top:60px;
+  margin-left: 400px;
+
+}
+
+.image {
+  width: 40%; /* Adjust the width of the image section */
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.form {
+  width: 60%; /* Adjust the width of the form section */
+  padding: 20px;
+  background-color: #f1f1f2; /* Add background color to form section */
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(83, 124, 165);
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 16px); /* Adjust the input width */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #74a3d6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+  </style>
+  <script>
+
+   function validateForm(event) {
+  event.preventDefault(); 
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+ if (username.trim() === '') {
+      alert("Please enter username.");
+      return;
+  }
+  if (password.trim() === '') {
+      alert("Please enter password");
+      return;
+  }
+    
+  if (password.length < 8 || !/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/\d/.test(password) || !/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) {
+      alert("Invalid Password");
+      return;
+  }
+  alert(username+" ! you are successfully Logged in");
+  window.location.href="carrerform.html";
+    
+}
+
+
+  </script>
+</head>
+<p style="font-size: 28px;padding-top: 70px; color: rgb(27, 14, 48) ;padding-left: 550px;"><b>Signin</b> to access Inmakes home</p>
+
+<body>
+    
+
+    <div class="container">
+        <div class="image">
+          <img src="C:\Users\kapil\Desktop\PROJECT\images\loginimage.webp" alt="Your Image" style="width: 350px; height:400px">
+        </div>
+        <div class="form">
+          <form id="loginForm">
+            <h2 style="color: rgb(83, 124, 165);">Login Form</h2>
+            <div class="input-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" onclick="validateForm(event)">Login</button>
+          </form>
+        </div>
+      </div>
+      
+</body>
+<p style="padding-left: 800px;color: black;">Don't have an Inmakes Account? <a href="signup.html" style="color:rgb(121, 129, 214);text-decoration: none; font-weight: bolder;">Sign up</a></p>
+
+</html>
