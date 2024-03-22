@@ -1,0 +1,134 @@
+
+  .center {
+    display: block;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    width: 50%;
+    float: right;
+    padding-right: 50px;
+  }
+  h2{
+    font-weight: bolder;
+    color: rgb(34, 105, 143);
+  font-style: i;
+    font-size: 20px;
+    
+  }
+  
+  
+  
+
+
+
+  /*sceond section*/
+
+  .flex-container1 {
+    display: flex;
+    flex-direction: row-reverse;
+    
+    text-align: center;
+    
+    height:200px;
+    width: 90%;
+    
+    
+  }
+  
+  .flex-item-left {
+    background-color: #ced2d6;
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  .flex-item-right {
+    background-color: #606f7e;
+    padding: 10px;
+    flex: 50%;
+  }
+  .flex-container1,h2
+  {
+    
+    color: #0f1c4d;
+    text-align:left;
+    padding-top:2px;
+    padding-left:70px;
+    font-size:30px;
+    font-style: inherit;
+  }
+  .flex-container1,p{
+    font-style: inherit;
+      color:#0f1c4d	;
+      font-size: 20px;
+      text-align: justify;
+  
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 800px) {
+    .flex-container1 {
+      flex-direction: column;
+    }
+  }
+  
+/*map-container*/
+
+iframe{
+width:50px;
+height: 80px;
+display:none;
+
+}
+iframe,a{
+  padding-left: 20px;
+  font-size: 20px;
+  color:rgb(7, 49, 61);
+  font-weight: bolder;
+  
+  text-align: justify; 
+  
+  
+}
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  font-weight: bolder;
+  
+  
+  
+}
+
+.fa:hover {
+  opacity: 0.8;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+margin-left: 145px;
+margin-bottom: 50px;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  margin-left: 40px;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  margin-left:45px ;
+}
+
+
+
+
+
+
+
+
+
+
+

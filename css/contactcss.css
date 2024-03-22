@@ -1,0 +1,61 @@
+
+iframe{
+width:50px;
+height: 80px;
+display: none;
+
+}
+iframe,a{
+padding-left: 10px;
+font-size: 25px;
+color:rgb(230, 104, 104);
+font-weight: bolder;
+
+text-align: justify; 
+
+
+}
+.fa {
+padding: 20px;
+font-size: 18px;
+width: 20px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+font-weight: bolder;
+
+
+}
+
+.fa:hover {
+opacity: 0.8;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+margin-left: 130px;
+padding-top: 20px;
+margin-bottom: 30px;
+}
+.fa-twitter {
+background: #55ACEE;
+color: white;
+margin-left: 40px;
+}
+.fa-linkedin {
+background: #007bb5;
+color: white;
+margin-left:45px ;
+}
+
+
+      img{
+  
+        height:500px;
+        width: 430px;
+        padding-right:14px;
+        
+        
+        
+      }
