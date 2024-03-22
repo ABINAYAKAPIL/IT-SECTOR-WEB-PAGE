@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>
+           Inmakes Home page
+        </title>
+        <link rel="stylesheet" type="text/css"href="C:\Users\kapil\Desktop\PROJECT\css\style1.css">
+        <link rel="stylesheet" type="text/css"href="C:\Users\kapil\Desktop\PROJECT\css\servicestyle.css">
+        <script src="C:\Users\kapil\Desktop\PROJECT\javascript\homejs.js"></script>
+        <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css>
+
+        
+    </head>
+    <body>
+        
+        <nav>
+            <h2>INMAKES INFOTECH</h2>
+            
+<ul>
+            
+               <li> <a href="#">HOME</a></li>
+                <li><a href="C:\Users\kapil\Desktop\PROJECT\html\about.html">ABOUT US</a></li>
+                <li><a href="C:\Users\kapil\Desktop\PROJECT\html\carrer.html">CAREERS</a></li>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn" style="color: whitesmoke;font-style: oblique;">SERVICES</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="C:\Users\kapil\Desktop\PROJECT\html\webdesign.html">Web Design services</a>
+                      <a href="C:\Users\kapil\Desktop\PROJECT\html\marketing.html">Digital Marketing</a>
+                    </div>
+                  </div>
+                
+     <a href="C:\Users\kapil\Desktop\PROJECT\html\contact.html">CONTACT US</a>
+     
+                </div>
+
+
+
+            
+        </nav>
+        <div class="oval" style="background-image: url(C:/Users/kapil/Desktop/PROJECT/images/front.png);"></div>
+        <p style="color: rgb(157, 175, 190); margin-left: 100px;padding-top: 90px; font-size: 25px;font-style:inherit;">Investing your knowledge and<br> your Future with us</p>
+</p>
+
+        <div class="register-container">
+          <h2  style="font-size: 30px;font-style: oblique;">REGISTER</h2>
+          <form id="registerForm" >
+            <div class="input-group">
+              <label for="loginId" style="color:rgb(184, 182, 189);font-style: oblique;">Username:</label>
+              <input type="text" id="loginId" name="loginId" placeholder="your name" >
+            </div>
+            <div class="input-group">
+              <label for="password" style="color:rgb(184, 182, 189);font-style: oblique;">
+              Password:</label>
+              <input type="password" id="password" name="password" placeholder=" your password " required>
+            </div>
+            <div class="input-group">
+
+            <label for="confirmPassword" style="color: rgb(184, 182, 189); font-style: oblique;">Confirm Password:</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password"></div> 
+            <button type="submit" onclick="validateForm(event)">Register</button>
+          </form>
+          <div id="error-message" class="error-message" style="display: none;">
+            <p>Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.</p>
+          </div>
+          
+        </div>
+      
+
+
+
+        <!--section counter-->
+        <div class="column">
+          <div class="card">
+            <p><i class="fa-solid fa-briefcase" style="text-align: center;"></i></p>
+            <h3>55+</h3>
+            <p>Projects</p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <p><i class="fa-solid fa-people-group"></i></p>
+            <h3>20+</h3>
+            <p>Teams</p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <p><i class="fa-regular fa-handshake"></i></p>
+            <h3>80+</h3>
+            <p>Clients</p>
+          </div>
+           
+         
+      
+        </div>
+        
+        
+	
+    
+      </body>
+        
+          
+    
+</html>
